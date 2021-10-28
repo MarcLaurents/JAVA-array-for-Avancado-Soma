@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class UsoForAvancadoArrayJavaBook227 {
+  public static void main(String[] args) {
+
+    Scanner input = new Scanner(System.in); // prepara console
+    System.out.println("Nº de elementos: "); // le o numero de elementos
+    int width = input.nextInt();
+    assert width > 0; // usa assert
+    int array[] = new int[width]; // aloca arranjo
+
+    for (int i = 0; i < array.length; i++) { // for comum p/ ler elementos
+      System.out.println("Elemento[" + i + "]? ");
+      array[i] = input.nextInt();
+    }
+    input.close();
+
+    int soma = 0; // exibe o arranjo e a soma dos seus elementos
+
+    System.out.println("[ ");
+    for (int element : array) { // for avancado p/ somar elementos
+      soma += element;
+      System.out.println(element + " ");
+
+    }
+
+    System.out.println("] soma = " + soma); // exibe soma obtida
+
+  }
+
+}
